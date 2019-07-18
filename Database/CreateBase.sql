@@ -8,10 +8,23 @@ CREATE TABLE Category (
     Name varchar,
 );
 
-CREATE TABLE Order (
-    OrderId int PRIMARY KEY,
-    Duration double,
-    Price double,
+CREATE TABLE Ingredient (
+    Name varchar,
+    IngredientId int PRIMARY KEY,
+);
+
+CREATE TABLE AllergenIngredient (
+    AllergenId int,
+    IngredientId int,
+    CONSTRAINT PRIMARY KEY (AllergenId, IngredientId),
+    CONSTRAINT FOREIGN KEY (AllergenId) REFERENCES (Allergen.AllergenId),
+    CONSTRAINT FOREIGN KEY (IngredientId) REFERENCES (Ingredient.IngredientId),
+);
+
+CREATE TABLE Stock (
+    IngredientId int PRIMARY KEY,
+    Quantity int,
+    CONSTRAINT FOREIGN KEY (IngredientId) REFERENCES (Ingredient.IngredientId),
 );
 
 CREATE TABLE Product (
@@ -19,18 +32,22 @@ CREATE TABLE Product (
     Price double,
     ProductId int PRIMARY KEY,
     Duration double,
-    Category int,
-    CONSTRAINT FOREIGN KEY (OrderId) REFERENCES (Order.OrderId),
+    CategoryId int,
+    CONSTRAINT FOREIGN KEY (CategoryId) REFERENCES (Category.CategoryId),
 );
 
-CREATE TABLE Ingredient (
-    Name varchar,
-    IngredientId int PRIMARY KEY,
+CREATE TABLE IngredientProduct (
+    IngredientId int,
+    ProductId int,
+    CONSTRAINT PRIMARY KEY (IngredientId, ProductId),
+    CONSTRAINT FOREIGN KEY (IngredientId) REFERENCES (Ingredient.IngredientId),
+    CONSTRAINT FOREIGN KEY (ProductId) REFERENCES (Product.ProductId),
 );
 
-CREATE TABLE Stock (
-    IngredientId int PRIMARY KEY,
-    Quantity int,
+CREATE TABLE Order (
+    OrderId int PRIMARY KEY,
+    Duration double,
+    Price double,
 );
 
 CREATE TABLE ProductOrder (
@@ -43,20 +60,14 @@ CREATE TABLE ProductOrder (
 );  
 
 
-CREATE TABLE IngredientProduct (
-    IngredientId int,
-    ProductId int,
-    CONSTRAINT PRIMARY KEY (IngredientId, ProductId),
-    CONSTRAINT FOREIGN KEY (IngredientId) REFERENCES (Ingredient.IngredientId),
-    CONSTRAINT FOREIGN KEY (ProductId) REFERENCES (Product.ProductId),
-);
 
-CREATE TABLE AllergenIngredient (
-    AllergenId int,
-    IngredientId int,
-    CONSTRAINT PRIMARY KEY (AllergenId, IngredientId),
-    CONSTRAINT FOREIGN KEY (AllergenId) REFERENCES (Allergen.AllergenId),
-    CONSTRAINT FOREIGN KEY (IngredientId) REFERENCES (Ingredient.IngredientId),
-);
+
+
+
+
+
+
+
+
         
     
