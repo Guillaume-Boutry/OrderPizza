@@ -1,3 +1,5 @@
+CREATE DATABASE OrderPizza;
+
 CREATE TABLE Allergen (
     Name varchar,
     AllergenId int PRIMARY KEY,
