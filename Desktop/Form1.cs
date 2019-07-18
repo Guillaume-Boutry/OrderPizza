@@ -16,5 +16,24 @@ namespace Desktop
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          //  throw new System.NotImplementedException();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewOrder newOrder = new NewOrder();
+            newOrder.Tag = this;
+            newOrder.Show(this);
+            Hide();
+        }
+        private void Check_Click(object sender, EventArgs e)
+        {
+            NewOrder newOrder= new NewOrder();
+            newOrder.Show();
+            Hide();
+        }
+        
     }
 }
