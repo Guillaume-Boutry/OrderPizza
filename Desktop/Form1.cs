@@ -30,10 +30,9 @@ namespace Desktop
         }
         private void Check_Click(object sender, EventArgs e)
         {
-            NewOrder newOrder= new NewOrder();
+            NewOrder newOrder = new NewOrder();
             newOrder.Show();
             Hide();
         }
-        
     }
 }
