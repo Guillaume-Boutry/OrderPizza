@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{B4698D4F-8659-4635-AC00-9D474CD451BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{E39EDA2C-5F0C-48EE-9E19-CAD187578109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{9FE6573E-E829-4120-A203-210F3BF5D2C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4698D4F-8659-4635-AC00-9D474CD451BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4698D4F-8659-4635-AC00-9D474CD451BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4698D4F-8659-4635-AC00-9D474CD451BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4698D4F-8659-4635-AC00-9D474CD451BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39EDA2C-5F0C-48EE-9E19-CAD187578109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39EDA2C-5F0C-48EE-9E19-CAD187578109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39EDA2C-5F0C-48EE-9E19-CAD187578109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39EDA2C-5F0C-48EE-9E19-CAD187578109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE6573E-E829-4120-A203-210F3BF5D2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE6573E-E829-4120-A203-210F3BF5D2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE6573E-E829-4120-A203-210F3BF5D2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE6573E-E829-4120-A203-210F3BF5D2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
