@@ -1,4 +1,4 @@
-CREATE DATABASE OrderPizza;
+CREATE DATABASE OrderPizza CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
 CREATE TABLE Allergen (
     Name varchar(80),
