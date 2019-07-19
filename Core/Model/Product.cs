@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core.Interfaces;
 
 namespace Core.Model
 {
@@ -11,7 +12,8 @@ namespace Core.Model
         public double Price { get; set; }
         public Category Category { get; set; }
 
-        public Product(int id, string name, List<Ingredient> ingredients, double duration, double price, Category category)
+        public Product(int id, string name, List<Ingredient> ingredients, double duration, double price,
+            Category category)
         {
             Id = id;
             Name = name;
@@ -23,7 +25,8 @@ namespace Core.Model
 
         public override string ToString()
         {
-            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Ingredients)}: {Ingredients}, {nameof(Duration)}: {Duration}, {nameof(Price)}: {Price}, {nameof(Category)}: {Category}";
+            return
+                $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Ingredients)}: {Ingredients}, {nameof(Duration)}: {Duration}, {nameof(Price)}: {Price}, {nameof(Category)}: {Category}";
         }
     }
 }
