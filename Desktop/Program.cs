@@ -16,8 +16,7 @@ namespace Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            //throw new NotImplementedException();
+            Application.Run(new Form1()); 
         }
     }
 }
