@@ -2,6 +2,6 @@ namespace Core.Interfaces
 {
     public interface IWritable
     {
-        string ToLine();
+        string ToHtmlString();
     }
 }
